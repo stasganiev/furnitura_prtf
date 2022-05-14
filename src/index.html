@@ -68,17 +68,83 @@
     </nav>
 
     <div class="header__main-area main-area">
-      <div class="main-area__content">
-
+      <div class="main-area__content banner">
+        <h1 class="banner__title">
+          Шкафы на заказ
+        </h1>
+        <p class="banner__description">
+          По заявке с сайта скидка 10% каждому покупателю
+        </p>
+        <div class="banner__counter counter">
+          <p class="counter__title">До конца скидки осталось:</p>
+          <ul class="counter__items">
+            <li class="counter__item">
+              <label class="counter__item-label" for="input-day">Дни</label>
+              <input class="counter__input-day" type="number" id="input-day" name="input-day" value="0" placeholder="0" min=0 max=10>
+            </li>
+            <li class="counter__item">
+              <label class="counter__item-label" for="input-hour">Часы</label>
+              <input class="counter__input-hour" type="number" id="input-hour" name="input-hour" value="0" placeholder="0" min=0 max=24>
+            </li>
+            <li class="counter__item">
+              <label class="counter__item-label" for="input-min">Мин</label>
+              <input class="counter__input-min" type="number" id="input-min" name="input-min" value="30" placeholder="0" min=0 max=59>
+            </li>
+            <li class="counter__item">
+              <label class="counter__item-label" for="input-sec">Сек</label>
+              <input class="counter__input-sec" type="number" id="input-sec" name="input-sec" value="59" placeholder="0" min=0 max=59>
+            </li>
+          </ul>
+        </div>
+        <input type="text" class="banner__input" id="phonenumber" name="phonenumber" value="" placeholder="+78884321122">
+        <button class="banner__btn btn btn__active" type="button" alt="Подсказка">
+          Получить скидку
+        </button>
       </div>
-      <div class="main-area__socials">
-
+      <div class="main-area__socials main-socials">
+        <ul class="main-socials__list">
+          <li class="main-socials__item">
+            <a href="#" title="Скайп" class="main-socials__link main-socials__link_skype">
+              <img src="#" alt="Скайп" class="main-socials__img" width="20" height="21">
+            </a>
+          </li>
+          <li class="main-socials__item">
+            <a href="#" title="Telegram" class="main-socials__link main-socials__link_tg">
+              <img src="#" alt="Telegram" class="main-socials__img" width="20" height="21">
+            </a>
+          </li>
+          <li class="main-socials__item">
+            <a href="#" title="WhatsUp" class="main-socials__link main-socials__link_wa">
+              <img src="#" alt="WhatsUp" class="main-socials__img" width="20" height="21">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
   </header>
 
   <main class="main">
+
+    <section class="about-cost">
+      <div class="about-cost__picture picture">
+        <span class="picture__line picture__line_uh"></span>
+        <span class="picture__line picture__line_uv"></span>
+        <img class="picture__img" src="#" width="360" height="544" alt="Образец шкафа-купе">
+        <span class="picture__line picture__line_dh"></span>
+        <span class="picture__line picture__line_dv"></span>
+      </div>
+      <div class="about-cost__content cost-content">
+        <h3 class="cost-content__title">Узнайте стоимость мебели</h3>
+        <p class="cost-content__text">Ответь на вопросы, получи скидку и бесплатный дизайн проект</p>
+        <button class="cost-content__btn btn btn__active" type="button" alt="Подсказка">
+          Пройти тест
+        </button>
+      </div>
+      <button class="about-cost__btn-submenu btn-submenu" type="button" alt="Выберите свой вариант">
+        <img class="btn-submenu__img" src="#">
+      </button>
+    </section>
 
   </main>
 
