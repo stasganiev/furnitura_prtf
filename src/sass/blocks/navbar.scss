@@ -1,0 +1,7 @@
+.navbar {
+  @include font-gilroy(24px, 1.167);
+
+  &__logo {
+    @include font-playfair(32px, 1.625, normal, uppercase);
+  }
+}

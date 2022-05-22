@@ -1,0 +1,11 @@
+.banner {
+  @include font-gilroy(26px, 28px);
+
+  &__title {
+    @include font-cormorant(70px);
+  }
+
+  &__description {
+    font-size: 33px;
+  }
+}
