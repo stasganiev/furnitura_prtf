@@ -1,75 +1,45 @@
-"use strict";
+import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import sass from 'gulp-dart-sass';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import browser from 'browser-sync';
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-// var pug = require('gulp-pug');
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var rename = require("gulp-rename");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var csso = require("gulp-csso");
+// Styles
 
-gulp.task("fonts", ()=>{
-  return gulp.src("src/fonts/**/*.*")
-    .pipe(gulp.dest("public/fonts"));
-});
-
-gulp.task("img", ()=>{
-  return gulp.src(["src/img/**/*.*", "src/elements/**/*.svg", "src/elements/**/*.jpg", "src/elements/**/*.png"])
-    .pipe(gulp.dest("public/img"));
-});
-
-gulp.task("js", ()=>{
-  return gulp.src("src/js/**/*.js")
-    .pipe(gulp.dest("public/js"));
-});
-
-gulp.task("html", ()=>{
-  return gulp.src("src/**/*.html")
-    .pipe(gulp.dest("public"));
-});
-
-// gulp.task("pug", ()=>{
-//   return gulp.src(["src/pug/**/*.pug", "!src/pug/templates/**/*.pug"])
-//     .pipe(pug({pretty:true}))
-//     .pipe(gulp.dest('public'))
-// });
-
-gulp.task("css", ()=>{
-  return gulp.src("src/sass/index.scss")
+export const styles = () => {
+  return gulp.src('src/sass/index.scss', { sourcemaps: true })
     .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("style_min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("public/css"))
-    .pipe(server.stream());
-});
+    .pipe(gulp.dest('src/css', { sourcemaps: '.' }))
+    .pipe(browser.stream());
+}
 
-gulp.task("server", ()=>{
-  server.init({
-    server: "public/",
-    notify: false,
-    open: true,
+// Server
+
+const server = (done) => {
+  browser.init({
+    server: {
+      baseDir: 'src'
+    },
     cors: true,
-    ui: false
+    notify: false,
+    ui: false,
   });
+  done();
+}
 
-  gulp.watch("src/elements/**/*.*", gulp.series("img", "js", "css"));
-  gulp.watch("src/fonts/**/*.*", gulp.series("fonts"));
-  gulp.watch("src/img/**/*.*", gulp.series("img"));
-  gulp.watch("src/js/**/*.js", gulp.series("js"));
-  gulp.watch("src/**/*.html", gulp.series("html"));
-  // gulp.watch("src/pug/**/*.pug", gulp.series("pug"));
-  gulp.watch("src/sass/**/*.scss", gulp.series("css"));
-  gulp.watch("src/*.html").on("change", server.reload);
-});
+// Watcher
 
-gulp.task("build", gulp.series("fonts", "img", "js", "html", "css"));
-gulp.task("start", gulp.series("build", "server"));
+const watcher = () => {
+  gulp.watch('src/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('src/*.html').on('change', browser.reload);
+}
+
+
+export default gulp.series(
+  styles, server, watcher
+);

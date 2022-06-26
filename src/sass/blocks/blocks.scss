@@ -1,4 +1,4 @@
 // Подключить все файлы стилей блоков и элементов:
-@import "navbar.scss";
-@import "banner.scss";
-@import "counter.scss";
+@use "navbar.scss";
+@use "banner.scss";
+@use "counter.scss";
