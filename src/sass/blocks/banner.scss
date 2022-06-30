@@ -1,6 +1,5 @@
 .banner {
   @include size(43%, 29%);
-  margin-top: 15%;
   @include flex-col;
   @include font-gilroy(26px, 28px);
 }

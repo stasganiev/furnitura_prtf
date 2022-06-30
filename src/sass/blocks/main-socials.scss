@@ -1,0 +1,11 @@
+.main-socials {
+  @include size(26px, 100%);
+  // position: relative;
+}
+
+.main-socials__list {
+  @include list-reset;
+  min-height: 114px;
+  @include flex-col-sp;
+  @include pos-top-right(calc(50% - 57px));
+}
