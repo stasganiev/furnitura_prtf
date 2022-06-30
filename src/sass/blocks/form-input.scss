@@ -1,0 +1,19 @@
+.form-input {
+  display: inline-block;
+  padding: 11px 20px;
+  min-width: 240px;
+
+  font: inherit;
+  @include font-gilroy(26px, 1.077);
+  vertical-align: middle;
+
+  border: none;
+  border-radius: 8px;
+
+  &--mini {
+    padding: 6px 8px;
+    min-width: 44px;
+    text-align: center;
+    border-radius: 0;
+  }
+}

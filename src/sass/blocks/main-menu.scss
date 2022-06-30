@@ -1,0 +1,23 @@
+.main-menu {
+  @include list-reset;
+  @include flex-row;
+}
+
+.main-menu__item {
+  display: flex;
+  align-items: stretch;
+  margin-right: 20px;
+  margin-bottom: 2px;
+}
+
+.main-menu__item:last-child {
+  margin-right: 0;
+}
+
+.main-menu__link {
+  display: flex;
+  align-items: center;
+  max-width: 140px;
+  padding-left: 5px;
+  padding-right: 5px;
+}

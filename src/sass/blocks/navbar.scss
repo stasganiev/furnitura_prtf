@@ -1,7 +1,9 @@
 .navbar {
+  @include flex-row-sp;
   @include font-gilroy(24px, 1.167);
+  margin-top: 30px
+}
 
-  &__logo {
-    @include font-playfair(32px, 1.625, normal, uppercase);
-  }
+.navbar__logo {
+  @include font-playfair(32px, 1.625, normal, uppercase);
 }

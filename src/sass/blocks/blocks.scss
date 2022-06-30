@@ -1,4 +1,10 @@
 // Подключить все файлы стилей блоков и элементов:
-@use "navbar.scss";
-@use "banner.scss";
-@use "counter.scss";
+@import "header.scss";
+@import "navbar.scss";
+@import "main-menu.scss";
+@import "fast-contacts.scss";
+@import "banner.scss";
+@import "counter.scss";
+
+@import "form-input.scss";
+@import "form-button.scss";

@@ -1,16 +1,14 @@
 {
   "name": "furnitura",
+  "private": true,
   "description": "furnitura",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
-    "start": "gulp start"
+    "build": "gulp styles",
+    "start": "gulp"
   },
-  "keywords": [
-    "Gulp"
-  ],
   "author": "Stas Ganiev",
   "license": "ISC",
   "devDependencies": {
@@ -21,5 +19,9 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "postcss": "8.3.11"
-  }
+  },
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module"
 }

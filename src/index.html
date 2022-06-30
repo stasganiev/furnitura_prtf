@@ -10,11 +10,11 @@
     <meta name="description" content="Дизайнерская мебель на заказ, индивидуальный проект">
 
     <!-- Собственные стили -->
-    <link href="css/style_min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <!-- Подключение шрифтов -->
-    <link rel="preload" href="Gilroy-Regular.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="playfair-display-2.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="Cormorant-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Gilroy-Regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/playfair-display-2.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cormorant-Regular.woff2" as="font" crossorigin="anonymous">
 
     <!-- Иконка загладки браузера (16х16 px) -->
     <link rel="shortcut icon" type="image/x-icon" href="img/mlogo16.png">
@@ -23,39 +23,39 @@
 <body>
 
   <!-- Контент страницы  -->
-  <header class="header">
+  <header class="header container-fluid">
 
     <nav class="header__navbar navbar">
       <div class="navbar__logo">MADESHKAF</div>
       <ul class="navbar__main-menu main-menu">
         <li class="main-menu__item">
           <a href="#" class="main-menu__link">
-            О нас
+            <span class="main-menu__link-content">О нас</span>
           </a>
         </li>
         <li class="main-menu__item">
           <a href="#" class="main-menu__link">
-            Каталог
+            <span class="main-menu__link-content">Каталог</span>
           </a>
         </li>
         <li class="main-menu__item">
           <a href="#" class="main-menu__link">
-            Материалы
+            <span class="main-menu__link-content">Материалы</span>
           </a>
         </li>
         <li class="main-menu__item">
           <a href="#" class="main-menu__link">
-            Рассчитать стоимость
+            <span class="main-menu__link-content">Рассчитать стоимость</span>
           </a>
         </li>
         <li class="main-menu__item">
           <a href="#" class="main-menu__link">
-            Отзывы
+            <span class="main-menu__link-content">Отзывы</span>
           </a>
         </li>
         <li class="main-menu__item">
           <a href="#" class="main-menu__link">
-            Контакты
+            <span class="main-menu__link-content">Контакты</span>
           </a>
         </li>
       </ul>
@@ -82,24 +82,24 @@
           <ul class="counter__items">
             <li class="counter__item">
               <label class="counter__item-label" for="input-day">Дни</label>
-              <input class="counter__input-day" type="number" id="input-day" name="input-day" value="0" placeholder="0" min="0" max="10">
+              <input class="counter__input-day form-input form-input--mini" type="number" id="input-day" name="input-day" value="0" placeholder="0" min="0" max="10">
             </li>
             <li class="counter__item">
               <label class="counter__item-label" for="input-hour">Часы</label>
-              <input class="counter__input-hour" type="number" id="input-hour" name="input-hour" value="0" placeholder="0" min="0" max="24">
+              <input class="counter__input-hour form-input form-input--mini" type="number" id="input-hour" name="input-hour" value="0" placeholder="0" min="0" max="24">
             </li>
             <li class="counter__item">
               <label class="counter__item-label" for="input-min">Мин</label>
-              <input class="counter__input-min" type="number" id="input-min" name="input-min" value="30" placeholder="0" min="0" max="59">
+              <input class="counter__input-min form-input form-input--mini" type="number" id="input-min" name="input-min" value="30" placeholder="0" min="0" max="59">
             </li>
             <li class="counter__item">
               <label class="counter__item-label" for="input-sec">Сек</label>
-              <input class="counter__input-sec" type="number" id="input-sec" name="input-sec" value="59" placeholder="0" min="0" max="59">
+              <input class="counter__input-sec form-input form-input--mini" type="number" id="input-sec" name="input-sec" value="59" placeholder="0" min="0" max="59">
             </li>
           </ul>
         </div>
-        <input type="text" class="banner__input" id="phonenumber" name="phonenumber" value="" placeholder="+78884321122">
-        <button class="banner__btn btn btn__active" type="button" alt="Подсказка">
+        <input type="text" class="banner__input form-input input-phone-js" id="phonenumber" name="phonenumber" value="" placeholder="+78884321122">
+        <button class="banner__button form-button button__active-js" type="button" alt="Подсказка">
           Получить скидку
         </button>
       </div>

@@ -1,5 +1,19 @@
-.counter {
-  &__item-label {
-    font-size: 21px;
-  }
+.counter__item-label {
+  font-size: 21px;
+}
+
+.counter__title {
+  margin-bottom: 9px;
+}
+
+.counter__items {
+  @include list-reset;
+  @include flex-row;
+}
+
+.counter__item {
+  @include flex-col;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-right: 13px;
 }

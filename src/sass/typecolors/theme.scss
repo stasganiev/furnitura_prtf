@@ -1,1 +1,36 @@
-// CSS: Цветовая тема сайта (по умолчанию не подключен)
+///////////////////////////
+// Title
+///////////////////////////
+
+.header {
+  background-color: $bg-color-dark;
+}
+
+.navbar {
+  color: $text-color-light;
+}
+
+.navbar__logo {
+  color: $text-color-logo;
+}
+
+.main-menu__link:hover {
+  background-color: rgba($bg-color, 15%);
+}
+
+.banner {
+  color: $text-color-light;
+}
+
+///////////////////////////
+// Forms
+///////////////////////////
+
+.form-button {
+  color: $text-color-on-button;
+  background-color: $bg-color-button;
+}
+
+.form-input {
+  color: $second-text-color;
+}

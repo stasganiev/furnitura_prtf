@@ -1,11 +1,24 @@
 .banner {
+  @include size(43%, 29%);
+  margin-top: 15%;
+  @include flex-col;
   @include font-gilroy(26px, 28px);
+}
 
-  &__title {
-    @include font-cormorant(70px);
-  }
+.banner__title {
+  margin-bottom: 40px;
+  @include font-cormorant(70px);
+}
 
-  &__description {
-    font-size: 33px;
-  }
+.banner__description {
+  margin-bottom: 20px;
+  font-size: 33px;
+}
+
+.banner__counter {
+  margin-bottom: 30px;
+}
+
+.banner__input {
+  margin-bottom: 30px;
 }
