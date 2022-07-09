@@ -1,5 +1,5 @@
 ///////////////////////////
-// Title
+// Header
 ///////////////////////////
 
 .header {
@@ -20,6 +20,11 @@
 
 .banner {
   color: $text-color-light;
+}
+
+.main-socials::after,
+.main-socials::before {
+  background: $text-color-light;
 }
 
 ///////////////////////////

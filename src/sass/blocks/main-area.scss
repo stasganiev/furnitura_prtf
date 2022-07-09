@@ -1,9 +1,6 @@
 .main-area {
   position: relative;
-}
-
-.main-area__content {
-  // margin-top: 15%;
+  height: calc(100vh - $navbar-height - $navbar-margig);
 }
 
 .main-area__socials {

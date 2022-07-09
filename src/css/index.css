@@ -359,6 +359,11 @@ template {
   color: #FFFFFF;
 }
 
+.main-socials::after,
+.main-socials::before {
+  background: #FFFFFF;
+}
+
 .form-button {
   color: #FFFFFF;
   background-color: #AF9678;
@@ -473,6 +478,11 @@ a {
 
 .header {
   min-height: 100vh;
+  height: 100vh;
+}
+
+.header__navbar {
+  margin-top: 30px;
 }
 
 .navbar {
@@ -486,7 +496,8 @@ a {
   line-height: 1.167;
   font-weight: normal;
   text-transform: unset;
-  margin-top: 30px;
+  min-height: 60px;
+  height: 60px;
 }
 
 .navbar__logo {
@@ -536,16 +547,17 @@ a {
 
 .banner {
   width: 43%;
-  height: 29%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-family: "Gilroy", "Futura", sans-serif;
   font-style: normal;
   font-size: 26px;
   line-height: 28px;
   font-weight: normal;
   text-transform: unset;
+  padding-top: 170px;
 }
 
 .banner__title {
@@ -599,6 +611,7 @@ a {
 
 .main-area {
   position: relative;
+  height: calc(100vh - 60px - 30px);
 }
 
 .main-area__socials {
@@ -610,6 +623,24 @@ a {
 .main-socials {
   width: 26px;
   height: 100%;
+}
+
+.main-socials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 2px;
+  height: calc(50% - 57px - 5px);
+}
+
+.main-socials::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 2px;
+  height: calc(50% - 57px - 5px);
 }
 
 .main-socials__list {

@@ -1,7 +1,9 @@
 .banner {
-  @include size(43%, 29%);
+  width: 43%;
   @include flex-col;
+  flex-wrap: nowrap;
   @include font-gilroy(26px, 28px);
+  padding-top: 170px;
 }
 
 .banner__title {

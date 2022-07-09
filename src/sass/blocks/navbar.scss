@@ -1,7 +1,8 @@
 .navbar {
   @include flex-row-sp;
   @include font-gilroy(24px, 1.167);
-  margin-top: 30px
+  min-height: $navbar-height;
+  height: $navbar-height;
 }
 
 .navbar__logo {

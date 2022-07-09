@@ -1,11 +1,32 @@
 .main-socials {
   @include size(26px, 100%);
-  // position: relative;
+}
+
+.main-socials::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  width: 2px;
+  height: calc(50% - $height-social-list / 2 - 5px);
+}
+
+.main-socials::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+
+  width: 2px;
+  height: calc(50% - $height-social-list / 2 - 5px);
 }
 
 .main-socials__list {
   @include list-reset;
-  min-height: 114px;
+  min-height: $height-social-list;
   @include flex-col-sp;
-  @include pos-top-right(calc(50% - 57px));
+  @include pos-top-right(calc(50% - $height-social-list / 2));
 }
