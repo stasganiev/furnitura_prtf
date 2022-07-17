@@ -1,6 +1,11 @@
 .header {
   min-height: 100vh;
   height: 100vh;
+
+  background-image: url("../img/main.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .header__navbar {

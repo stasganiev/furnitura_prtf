@@ -1,0 +1,11 @@
+.cost-content {
+
+}
+
+.cost-content__title {
+  @include font-cormorant(68px, 1.04);
+}
+
+.cost-content__text {
+  @include font-gilroy(30px, 1.23);
+}

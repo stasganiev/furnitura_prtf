@@ -1,6 +1,6 @@
 .navbar {
   @include flex-row-sp;
-  @include font-gilroy(24px, 1.167);
+  @include font-gilroy(22px, 1.167);
   min-height: $navbar-height;
   height: $navbar-height;
 }

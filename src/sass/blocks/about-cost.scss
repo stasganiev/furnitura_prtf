@@ -1,0 +1,19 @@
+.about-cost {
+  position: relative;
+  @include flex-row-sp;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+about-cost__picture {
+
+}
+
+.about-cost__content {
+
+}
+
+.about-cost__btn-submenu {
+  @include pos-bottom-right;
+}
