@@ -688,8 +688,36 @@ a {
 }
 
 .picture {
+  position: relative;
   width: 360px;
   height: 544px;
+}
+
+.picture__line {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  min-width: 100px;
+  min-height: 2px;
+  background-color: black;
+}
+.picture__line_uh {
+  top: -28px;
+  right: 0;
+}
+.picture__line_uv {
+  top: 50px;
+  right: -80px;
+  transform: rotate(90deg);
+}
+.picture__line_dh {
+  bottom: -28px;
+  left: 0;
+}
+.picture__line_dv {
+  bottom: 50px;
+  left: -80px;
+  transform: rotate(90deg);
 }
 
 .cost-content__title {
